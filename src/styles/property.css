@@ -1,0 +1,56 @@
+.container {
+    width: 400px;
+    height: fit-content;
+    margin: 1rem 2rem;
+    padding: 1rem;
+    border-radius: 2rem;
+}
+
+.prop-image {
+    height: 300px;
+    width: 350px;
+    object-fit: cover;
+    margin: 0.5rem;
+    border-radius: 1rem;
+}
+
+.headline {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin-bottom: 0.5rem;
+}
+
+.btn {
+    margin: 1rem 0.2rem;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    background-color: rgb(56, 56, 203);
+    color: rgb(241, 238, 238);
+}
+
+.btn:hover {
+    background-color: rgb(241, 238, 238);
+    color: rgb(42, 42, 42);
+}
+
+
+@media screen and (max-width: 400px) {
+    .container {
+        width: 280px;
+    }    
+
+    .prop-image {
+        height: 200px;
+        width: 220px;
+    }
+
+    .btn {
+        padding: 0.65rem;
+        border-radius: 0.5rem;
+    }
+}

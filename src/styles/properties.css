@@ -1,0 +1,7 @@
+.properties-container {
+    background-color: rgb(50, 50, 50);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}

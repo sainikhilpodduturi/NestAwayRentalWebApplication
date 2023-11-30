@@ -1,0 +1,25 @@
+#navbar {
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    position: sticky;
+    top: 0;
+}
+
+.switch {
+    display: flex;
+    align-items: center;
+}
+
+.toggle {
+    cursor: pointer;
+    margin: 0 0.5rem;
+}
+
+@media screen and (max-width:400px) {
+    .mode-name {
+        display: none;
+    }  
+}
