@@ -7,18 +7,17 @@ const Properties = (props) => {
   let [rentalDetails, setRentalDetails] = useState([]);
   let containerBgColor;
 
-  if (mode === 'dark'){
+  if (mode === "dark") {
     containerBgColor = {
-      backgroundColor: 'rgb(50, 50, 50)'
-    }
+      backgroundColor: "rgb(50, 50, 50)",
+    };
   } else {
     containerBgColor = {
-      backgroundColor: 'rgb(210, 210, 210)'
-    }
+      backgroundColor: "rgb(210, 210, 210)",
+    };
   }
 
   useEffect(() => {
-
     const getData = async () => {
       let url = `https://mocki.io/v1/c1b8d087-971c-472f-870c-47185f710c17`;
       let data = await fetch(url);
@@ -26,10 +25,7 @@ const Properties = (props) => {
       setRentalDetails(data.houses);
     };
     getData();
-
   }, []);
-
-  console.log(rentalDetails);
 
   return (
     <>
@@ -44,7 +40,12 @@ const Properties = (props) => {
                 location={element.sublocality_level1}
                 rent={element.rent}
                 id={element.nestaway_id}
-                mode = {mode}
+                mode={mode}
+                shortDescription={element.description.short_description}
+                longDescription={element.description.long_description}
+                amenities={element.amenity_list}
+                availability={element.available_from}
+                roomAvailability={element.room_available_count}
               />
             </div>
           );

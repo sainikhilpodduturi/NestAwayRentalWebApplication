@@ -1,23 +1,23 @@
-import React, { useState } from 'react'
-import Properties from './components/Properties'
-import Navbar from './components/Navbar'
+import React, { useState } from "react";
+import Properties from "./components/Properties";
+import Navbar from "./components/Navbar";
 
 const App = () => {
-  let[mode, setMode] = useState('light');
+  let [mode, setMode] = useState("light");
   let changeMode = () => {
-    if (mode === 'light'){
-      setMode('dark')
+    if (mode === "light") {
+      setMode("dark");
     } else {
-      setMode('light')
+      setMode("light");
     }
-  }
+  };
 
   return (
     <>
       <Navbar mode={mode} changeMode={changeMode} />
       <Properties mode={mode} />
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
